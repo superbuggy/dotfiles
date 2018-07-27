@@ -1,0 +1,6 @@
+# Ignore all
+/*
+
+!.bash_profile
+!.vscode/
+!.gitignore
