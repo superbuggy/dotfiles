@@ -1,0 +1,98 @@
+{
+	"name": "camelcasenavigation",
+	"displayName": "Camel Case Navigation",
+	"description": "Provides Camel Case cursor navigation for the Visual Studio Code editor.",
+	"homepage": "https://raw.githubusercontent.com/maptz/Maptz.VSCode.Extensions.CamelCaseNavigation/master/ReadMe.md",
+	"version": "0.3.48",
+	"publisher": "maptz",
+	"engines": {
+		"vscode": "^1.11.0"
+	},
+	"repository": "https://github.com/woodced/Maptz.VSCode.Extensions.CamelCaseNavigation",
+	"categories": [
+		"Other"
+	],
+	"icon": "imgs/Icon.png",
+	"activationEvents": [
+		"*"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.extendCamelLeftCommand",
+				"title": "Extend Camel Left"
+			},
+			{
+				"command": "extension.extendCamelRightCommand",
+				"title": "Extend Camel Right"
+			},
+			{
+				"command": "extension.moveCamelLeftCommand",
+				"title": "Move Camel Left"
+			},
+			{
+				"command": "extension.moveCamelRightCommand",
+				"title": "Move Camel Right"
+			},
+			{
+				"command": "extension.deleteCamelLeftCommand",
+				"title": "Delete previous camel word"
+			},
+			{
+				"command": "extension.deleteCamelRightCommand",
+				"title": "Delete next camel word"
+			}
+		],
+		"keybindings": [
+			{
+				"command": "extension.extendCamelLeftCommand",
+				"key": "ctrl+shift+left",
+				"when": "editorTextFocus"
+			},
+			{
+				"command": "extension.extendCamelRightCommand",
+				"key": "ctrl+shift+right",
+				"when": "editorTextFocus"
+			},
+			{
+				"command": "extension.moveCamelLeftCommand",
+				"key": "ctrl+left",
+				"when": "editorTextFocus"
+			},
+			{
+				"command": "extension.moveCamelRightCommand",
+				"key": "ctrl+right",
+				"when": "editorTextFocus"
+			},
+			{
+				"command": "extension.deleteCamelLeftCommand",
+				"key": "ctrl+shift+backspace",
+				"when": "editorTextFocus"
+			},
+			{
+				"command": "extension.deleteCamelRightCommand",
+				"key": "ctrl+delete",
+				"when": "editorTextFocus"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "tsc -p ./ts/",
+		"compile": "tsc -watch -p ./ts/",
+		"postinstall": "node ./node_modules/vscode/bin/install"
+	},
+	"dependencies": {
+		"xregexp": "^3.1.1"
+	},
+	"devDependencies": {
+		"typescript": "^2.0.3",
+		"@types/node": "^6.0.40",
+		"vscode": "^1.0.0"
+	},
+	"__metadata": {
+		"id": "d36d91a3-b005-46ad-a454-49fe08c794b8",
+		"publisherId": "6687261c-62a9-45e8-9369-db5e1f37b28a",
+		"publisherDisplayName": "maptz"
+	}
+}
