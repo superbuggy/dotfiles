@@ -12,12 +12,19 @@ function ..() {
   export MPWD=$P
 }
 
+function cra() {
+  create-react-app $1
+  cd $1
+  rm src/App.css src/App.css src/App.test.js src/logo.svg
+  printf "import React, { Component } from 'react'\n\nclass App extends Component {\n  render() {\n    return (\n      <div>\n        {  }\n      </div>\n    )\n  }\n}\n\nexport default App" > src/App.js
+  code .
+}
+
 export GITHUB_USERNAME='superbuggy'
 export PATH="/usr/local/bin:$PATH"EDITOR=code
 export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
 
-alias gs='git status'
-alias gc='git commit -m'
+## Hide/Show Mac OS X Doc
 
 function showdock() {
   defaults delete com.apple.dock autohide-delay; killall Dock
@@ -27,6 +34,9 @@ function hidedock() {
   defaults write com.apple.dock autohide-delay -float 1000; killall Dock
 }
 
+## Deployment
+
+### Netlify
 function dpl() {
   git add .
   git commit -m "$1"
@@ -35,6 +45,8 @@ function dpl() {
   netlifyctl deploy
 }
 
+
+### GitHub Pages
 function ghpb() {
   git checkout master
   ga .
@@ -50,12 +62,17 @@ function ghpb() {
   git checkout master
 }
 
+## GIT
+
+alias gs='git status'
+alias gc='git commit -m'
+alias gac='git add . && git commit -m'
 alias gd='git diff'
 alias ga='git add'
 alias gb='git branch -a'
 alias gp='git push'
 alias gl='git log --all --decorate --graph --pretty=format:"%C(yellow)%h%Creset %C(auto)%d%Creset %Cblue%ar%Creset %Cred%an%Creset %n%w(72,1,2)%s"'
-alias gnr='open https://github.com/new'
+alias ghnr='open https://github.com/new'
 
 alias t='tree -Ia "node_modules|\.git" && echo "ignoring node_modules and .git"'
 alias sb='cd ~/rhizome-code-domain/sandbox/'
@@ -63,7 +80,8 @@ alias rcd='cd rhizome-code-domain'
 alias lsa='ls -alGt'
 
 alias hso='http-server -o'
-alias rdcms='rake db:drop db:create db:migrate db:seed'
+alias rdcms='rails db:drop db:create db:migrate db:seed'
+alias r4dcms='rake db:drop db:create db:migrate db:seed'
 alias ebp='code ~/.bash_profile'
 alias refpro='source ~/.bash_profile'
 
