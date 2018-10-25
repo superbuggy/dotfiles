@@ -46,7 +46,7 @@ function dpl() {
 }
 
 
-### GitHub Pages
+### GitHub Pages deploy script for superbuggy.github.io
 function ghpb() {
   git checkout master
   ga .
