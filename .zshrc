@@ -121,20 +121,18 @@ alias r4dcms='rake db:drop db:create db:migrate db:seed'
 alias ezrc='code ~/.zshrc'
 alias refpro='source ~/.zshrc'
 alias phpmamp='/Applications/MAMP/bin/php/php7.2.8/bin/php'
-alias ..g='cd $(git rev-parse --show-toplevel)'
 
-# WP CLI container
+
+# Docker
+
+docker-stop() { docker stop $(docker ps -a -q); }
 alias dcwp='docker-compose exec --user www-data phpfpm wp'
-
-# Run shell in Docker Containers
-## https://docs.docker.com/engine/reference/commandline/exec/#description
+## Run shell in Docker Containers
+### https://docs.docker.com/engine/reference/commandline/exec/#description
 alias dcphpsh='docker-compose exec --user root phpfpm bash'
 alias dcsqlsh='docker-compose exec --user root mysql bash'
   # alias dcsqlsh='docker exec -it local-dev_mysql_1 bash' #userless
-
-docker-stop() { docker stop $(docker ps -a -q); }
-
 alias dup="docker-stop && docker-compose up -d"
-
+alias dcls="docker container ls"
 # container name, un/pw hardcoded
 import_db() { cat $1 | pv | docker exec -i local-dev_mysql_1 mysql -uroot -ppassword wordpress }
