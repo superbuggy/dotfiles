@@ -134,5 +134,6 @@ alias dcsqlsh='docker-compose exec --user root mysql bash'
   # alias dcsqlsh='docker exec -it local-dev_mysql_1 bash' #userless
 alias dup="docker-stop && docker-compose up -d"
 alias dcls="docker container ls"
+alias dcps="docker-compose ps"
 # container name, un/pw hardcoded
 import_db() { cat $1 | pv | docker exec -i $2 mysql -uroot -ppassword wordpress }
