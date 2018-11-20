@@ -138,6 +138,7 @@ prompt_git() {
     set -x
 
     # my additions
+    local remote_name remote_base
     remote_name="$(git config --get remote.origin.url)"
     if [ -n $remote_name ]; then
       remote_base="📡 $(basename -s .git $remote_name)"
@@ -241,21 +242,6 @@ prompt_docker_host() {
   fi
 }
 
-prompt_remote_name() { # my addition
-
-  remote_name="$(git config --get remote.origin.url)"
-  # if [ -n $dirty ]; then
-  #  bg_color=yellow
-  # else
-  #  bg_color=green
-  # fi
-  local bg_color
-  $bg_color=white
-  if [ $remote_name ]; then
-    prompt_segment $bg_color blue "📡 $(basename -s .git $remote_name)"
-  fi
-}
-
 ## Main prompt
 build_prompt() {
   RETVAL=$?
@@ -264,9 +250,7 @@ build_prompt() {
   prompt_docker_host # my addition
   prompt_context
   prompt_dir
-  prompt_git
-  # prompt_remote_name # my addition
-  prompt_bzr
+  prompt_git # contains modifications
   prompt_hg
   prompt_end
 }
