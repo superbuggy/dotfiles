@@ -144,16 +144,14 @@ prompt_git() {
       remote_base="📡 $(basename -s .git $remote_name)"
     fi
 
-    # https://github.com/blueyed/oh-my-zsh/blob/5228d6e/themes/blueyed.zsh-theme#L766-L789
-    # Gets the commit difference counts between local and remote.
-    # local commits_difference
+    # adapted from https://github.com/blueyed/oh-my-zsh/blob/5228d6e/themes/blueyed.zsh-theme#L766-L789
 
     local commits_difference
     local ahead
     local behind
 
-    ahead_and_behind_cmd="git rev-list --count --left-right HEAD...@{upstream}"
     # Get ahead and behind counts.
+    ahead_and_behind_cmd="git rev-list --count --left-right HEAD...@{upstream}"
     ahead_and_behind="$(${(z)ahead_and_behind_cmd} 2> /dev/null)"
 
     ahead="$ahead_and_behind[(w)1]"
@@ -166,9 +164,6 @@ prompt_git() {
     if (( $ahead )) ; then
       commits_difference+="%{%K{green}%}⬆$ahead%{%K{$CURRENT_BG}%} "
     fi
-
-
-
 
     echo -n "${ref/refs\/heads\//$PL_BRANCH_CHAR }${vcs_info_msg_0_%% }${mode}"
     echo -n " on $remote_base $commits_difference"
