@@ -144,6 +144,36 @@ prompt_git() {
       remote_base="📡 $(basename -s .git $remote_name)"
     fi
 
+    # https://github.com/blueyed/oh-my-zsh/blob/5228d6e/themes/blueyed.zsh-theme#L766-L789
+    # Gets the commit difference counts between local and remote.
+    local commits_difference
+
+    ahead_and_behind_cmd="$_git_cmd rev-list --count --left-right HEAD...@{upstream}"
+    # Get ahead and behind counts.
+    ahead_and_behind="$(${(z)ahead_and_behind_cmd} 2> /dev/null)"
+
+    ahead="$ahead_and_behind[(w)1]"
+    if (( $ahead )); then
+        ahead="${normtext}+${ahead}"
+        # Display a warning if there are fixup/squash commits that are usually
+        # meant to be interactively rebased.
+        if $_git_cmd log --pretty=format:%s @{upstream}.. | \grep -Eq '^(fixup|squash)!'; then
+            ahead+="${hitext}(f!)"
+        fi
+        commits_difference+=($ahead)
+    fi
+
+    behind="$ahead_and_behind[(w)2]"
+    if (( $behind )); then
+        # Display hint for fixup/squash commits, but in normal text.
+        if $_git_cmd log --pretty=format:%s ..@{upstream} | \grep -Eq '^(fixup|squash)!'; then
+            behind+="${dimmedtext}(f)"
+        fi
+        commits_difference+=( "${alerttext}-${behind}" )
+    fi
+
+    echo $commits_difference
+
     echo -n "${ref/refs\/heads\//$PL_BRANCH_CHAR }${vcs_info_msg_0_%% }${mode} on $remote_base"
   fi
 }
