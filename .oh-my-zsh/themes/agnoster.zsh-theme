@@ -148,7 +148,9 @@ prompt_git() {
     # Gets the commit difference counts between local and remote.
     # local commits_difference
 
-    local commits_difference=""
+    local commits_difference
+    local ahead
+    local behind
 
     ahead_and_behind_cmd="git rev-list --count --left-right HEAD...@{upstream}"
     # Get ahead and behind counts.
@@ -157,9 +159,16 @@ prompt_git() {
     ahead="$ahead_and_behind[(w)1]"
     behind="$ahead_and_behind[(w)2]"
 
-    if [ $ahead ] || [ $behind ] ; then
-      commits_difference="%{%K{red}%}⬇$behind%{%K{$CURRENT_BG}%} %{%K{green}%}⬆$ahead%{%K{$CURRENT_BG}%}"
+    if (( $behind )) ; then
+      commits_difference+="%{%K{red}%}⬇$behind%{%K{$CURRENT_BG}%} "
     fi
+
+    if (( $ahead )) ; then
+      commits_difference+="%{%K{green}%}⬆$ahead%{%K{$CURRENT_BG}%} "
+    fi
+
+
+
 
     echo -n "${ref/refs\/heads\//$PL_BRANCH_CHAR }${vcs_info_msg_0_%% }${mode}"
     echo -n " on $remote_base $commits_difference"
