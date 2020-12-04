@@ -81,6 +81,7 @@ prompt_end() {
   fi
   echo -n "%{%f%}"
   CURRENT_BG=''
+  echo '\n%1{🕯%} '
 }
 
 ### Prompt components
