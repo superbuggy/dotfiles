@@ -2,6 +2,8 @@
 /*
 
 !.bash_profile
+!.config/nvim
+!.config/karabiner
 !.zshrc
 !.gitignore
 !.gitignore_global
