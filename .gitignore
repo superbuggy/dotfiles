@@ -1,9 +1,16 @@
 # Ignore everything
-*
+/*
 
-!/.bash_profile
-!/.config/nvim/*
-!/.config/karabiner/*
+/.config/*
+!/.config
+/.config/karabiner/automatic_backups
+!/.config/nvim
+!/.config/karabiner
+
+/.oh-my-zsh/*
+!/.oh-my-zsh/custom
+
 !/.zshrc
+!/.bash_profile
 !/.gitignore
 !/.gitignore_global
