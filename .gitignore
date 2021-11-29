@@ -7,8 +7,10 @@
 !/.config/nvim
 !/.config/karabiner
 
-/.oh-my-zsh/*
-!/.oh-my-zsh/custom
+/.oh-my-zsh-custom/*
+!/.oh-my-zsh-custom
+!/.oh-my-zsh-custom/themes
+!/.oh-my-zsh-custom/plugins
 
 !/.zshrc
 !/.bash_profile
