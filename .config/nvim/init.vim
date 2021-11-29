@@ -5,9 +5,10 @@ set shiftwidth=2
 set tabstop=2
 set showbreak=↪\ 
 set list
-set listchars=tab:→\ ,eol:↲,nbsp:␣,trail:•,extends:⟩,precedes:⟨
+set listchars=tab:→\ ,nbsp:␣,trail:•,extends:⟩,precedes:⟨
 set wildmenu
 set wildmode=longest:full,full
+set termguicolors
 map gf :edit <cfile><cr>
 
 vnoremap < <gv
@@ -37,3 +38,4 @@ source ~/.config/nvim/plugins-installed/visual-multi.vim
 
 call plug#end()
 
+colorscheme monokai_pro
