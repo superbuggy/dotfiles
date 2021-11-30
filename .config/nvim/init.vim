@@ -9,10 +9,20 @@ set listchars=tab:→\ ,nbsp:␣,trail:•,extends:⟩,precedes:⟨
 set wildmenu
 set wildmode=longest:full,full
 set termguicolors
+
+" Will create file that doesn't exist when using gf
 map gf :edit <cfile><cr>
 
+" Reselect visual selection after indenting
 vnoremap < <gv
 vnoremap > >gv
+
+let mapleader = "\<space>"
+
+nmap <leader>ve :edit ~/.config/nvim/init.vim<cr>
+nmap <leader>vc :edit ~/.config/nvim/coc-settings.json<cr>
+nmap <leader>vk :edit ~/.config/kitty/kitty.conf<cr>
+nmap <leader>vr :source ~/.config/nvim/init.vim<cr>
 
 "--------------------------------------------------------------------------
 " Plugins
@@ -32,6 +42,7 @@ source ~/.config/nvim/plugins-installed/coc.vim
 source ~/.config/nvim/plugins-installed/commentary.vim
 source ~/.config/nvim/plugins-installed/editorconfig.vim
 source ~/.config/nvim/plugins-installed/monokai-pro.vim
+source ~/.config/nvim/plugins-installed/nerdtree.vim
 source ~/.config/nvim/plugins-installed/polyglot.vim
 source ~/.config/nvim/plugins-installed/surround.vim
 source ~/.config/nvim/plugins-installed/visual-multi.vim
