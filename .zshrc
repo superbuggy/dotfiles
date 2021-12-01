@@ -1,8 +1,6 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-# phpcs --config-set installed_paths ~/php-utilities/WordPress-Coding-Standards
-
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 export ZSH_CUSTOM="$HOME/.oh-my-zsh-custom"
@@ -10,8 +8,6 @@ export ZSH_CUSTOM="$HOME/.oh-my-zsh-custom"
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-
-
 DEFAULT_USER="$USER" #DEFAULT_USER is undefined otherwise, for use with agnoster theme
 ZSH_THEME="agnoster-modded"
 
@@ -53,9 +49,6 @@ ZSH_THEME="agnoster-modded"
 # see 'man strftime' for details.
 # HIST_STAMPS="mm/dd/yyyy"
 
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
-
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
@@ -85,15 +78,11 @@ fi
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
+##################################################################################
 #
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+# Aliases
+#
+##################################################################################
 
 alias gs='git status'
 alias gc='git commit -m'
@@ -103,13 +92,8 @@ alias gb='git branch -a'
 alias gp='git push'
 alias gl='git log --all --decorate --graph --pretty=format:"%C(yellow)%h%Creset %C(auto)%d%Creset %Cblue%ar%Creset %Cred%an%Creset %n%w(72,1,2)%s"'
 alias ghnr='open https://github.com/new'
-
-alias t='tree -Ia "node_modules|\.git" && echo "ignoring node_modules and .git"'
-alias lsa='ls -alGt'
 alias plz=sudo
-
-alias hso='http-server -o'
-alias ezrc='code ~/.zshrc'
+alias ezrc='nvim ~/.zshrc'
 alias xls='exa --long --header --git'
 alias ls='xls -a'
 alias refpro='source ~/.zshrc'
@@ -118,3 +102,4 @@ alias acki='ack --ignore-file=match:/\.svg\|\.scss\|app\.\|\.css/'
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
