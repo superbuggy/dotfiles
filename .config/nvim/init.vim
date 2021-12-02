@@ -41,6 +41,7 @@ source ~/.config/nvim/plugins-installed/airline.vim
 source ~/.config/nvim/plugins-installed/coc.vim
 source ~/.config/nvim/plugins-installed/commentary.vim
 source ~/.config/nvim/plugins-installed/editorconfig.vim
+source ~/.config/nvim/plugins-installed/fzf.vim
 source ~/.config/nvim/plugins-installed/monokai-pro.vim
 source ~/.config/nvim/plugins-installed/nerdtree.vim
 source ~/.config/nvim/plugins-installed/polyglot.vim
