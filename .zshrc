@@ -94,6 +94,7 @@ alias gl='git log --all --decorate --graph --pretty=format:"%C(yellow)%h%Creset 
 alias ghnr='open https://github.com/new'
 alias plz=sudo
 alias ezrc='nvim ~/.zshrc'
+alias evrc='nvim ~/.config/nvim/init.vim'
 alias xls='exa --long --header --git'
 alias ls='xls -a'
 alias refpro='source ~/.zshrc'
