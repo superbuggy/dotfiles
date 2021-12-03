@@ -3,7 +3,7 @@ set hidden
 set expandtab
 set shiftwidth=2
 set tabstop=2
-set showbreak=↪\ 
+set showbreak=↪\
 set list
 set listchars=tab:→\ ,nbsp:␣,trail:•,extends:⟩,precedes:⟨
 set wildmenu
