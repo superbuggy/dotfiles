@@ -6,6 +6,7 @@
 /.config/karabiner/automatic_backups
 !/.config/nvim
 !/.config/karabiner
+!/.config/kitty
 
 /.oh-my-zsh-custom/*
 !/.oh-my-zsh-custom
