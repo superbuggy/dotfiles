@@ -48,13 +48,14 @@ endfunction
 
 " Highlight the symbol and its references when holding the cursor.
 autocmd CursorHold * silent call CocActionAsync('highlight')
+autocmd FileType scss setl iskeyword+=@-@
 
 " Symbol renaming.
 nmap <leader>rn <Plug>(coc-rename)
 
-
 " Add `:Format` command to format current buffer.
 command! -nargs=0 Format :call CocAction('format')
+command! -nargs=0 ESLint :call CocAction('runCommand', 'eslint.executeAutofix')
 
 " Add `:Fold` command to fold current buffer.
 command! -nargs=? Fold :call     CocAction('fold', <f-args>)
@@ -64,3 +65,22 @@ command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organize
 
 nmap <leader>l :CocFzfList<cr>
 
+" GoTo code navigation.
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+" nmap <silent> ]h <Plug>(coc-git-nextchunk)
+" nmap <silent> [h <Plug>(coc-git-prevchunk)
+
+" apply autofix to problem on the current line.
+nmap <leader>af  <plug>(coc-fix-current)
+nmap <leader>am  <plug>(coc-format-selected)
+xmap <leader>am  <plug>(coc-format-selected)
+nmap <leader>ac  <Plug>(coc-codeaction)
+" Applying codeAction to the selected region.
+" " Example: `<leader>aap` for current paragraph
+" xmap <leader>a  <Plug>(coc-codeaction-selected)
+" nmap <leader>a  <Plug>(coc-codeaction-selected)
+" nmap <leader>ga  <Plug>(coc-codeaction-line)
