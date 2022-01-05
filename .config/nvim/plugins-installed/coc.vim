@@ -55,10 +55,11 @@ nmap <leader>rn <Plug>(coc-rename)
 
 " Add `:Format` command to format current buffer.
 command! -nargs=0 Format :call CocAction('format')
-command! -nargs=0 ESLint :call CocAction('runCommand', 'eslint.executeAutofix')
+command! -nargs=0 ESLFix :call CocAction('runCommand', 'eslint.executeAutofix')
 
 " Add `:Fold` command to fold current buffer.
 command! -nargs=? Fold :call     CocAction('fold', <f-args>)
+command! -nargs=? Unfold :call   CocAction('unfold', <f-args>)
 
 " Add `:OR` command for organize imports of the current buffer.
 command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
