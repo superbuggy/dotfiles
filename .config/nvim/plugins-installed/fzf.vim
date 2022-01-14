@@ -7,7 +7,23 @@ let $FZF_DEFAULT_OPTS = '--layout=reverse --info=inline'
 
 " Customise the Files command to use rg which respects .gitignore files
 command! -bang -nargs=? -complete=dir Files
-    \ call fzf#run(fzf#wrap('files', fzf#vim#with_preview({ 'dir': <q-args>, 'sink': 'e', 'source': 'rg --files --hidden' }), <bang>0))
+    \ call fzf#run( 
+    \   fzf#wrap(
+    \     'files',
+    \     fzf#vim#with_preview({ 
+    \       'dir': <q-args>,
+    \       'sink': 'e', 
+    \       'source': 'rg --files --hidden' 
+    \     }), 
+    \     <bang>0 
+    \   )
+    \ )
+
+command! -bang -nargs=* Rg
+  \ call fzf#vim#grep(
+  \   "rg --column --line-number --no-heading --color=always --smart-case -- ".shellescape(<q-args>), 1,
+  \   fzf#vim#with_preview('right', 'ctrl-/'), 1)
+
 
 " Add an AllFiles variation that ignores .gitignore files
 command! -bang -nargs=? -complete=dir AllFiles
