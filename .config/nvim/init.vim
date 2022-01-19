@@ -48,6 +48,8 @@ nmap <leader>vr :source ~/.config/nvim/init.vim<cr>
 nmap <leader>[ :bp<cr>
 nmap <leader>] :bn<cr>
 
+:command Synr syntax sync fromstart
+
 " Automatically install vim-plug
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
 if empty(glob(data_dir . '/autoload/plug.vim'))
