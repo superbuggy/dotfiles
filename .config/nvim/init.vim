@@ -64,6 +64,7 @@ source ~/.config/nvim/plugins-installed/coc.vim
 source ~/.config/nvim/plugins-installed/commentary.vim
 source ~/.config/nvim/plugins-installed/context-commentstring.vim
 source ~/.config/nvim/plugins-installed/editorconfig.vim
+source ~/.config/nvim/plugins-installed/exchange.vim
 source ~/.config/nvim/plugins-installed/fugitive.vim
 source ~/.config/nvim/plugins-installed/fzf.vim
 source ~/.config/nvim/plugins-installed/sonokai.vim
