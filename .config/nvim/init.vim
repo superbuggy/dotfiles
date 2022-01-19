@@ -73,6 +73,7 @@ source ~/.config/nvim/plugins-installed/surround.vim
 source ~/.config/nvim/plugins-installed/tidal.vim
 source ~/.config/nvim/plugins-installed/visual-multi.vim
 source ~/.config/nvim/plugins-installed/wordmotion.vim
+source ~/.config/nvim/plugins-installed/workspaces.vim
 
 call plug#end()
 
