@@ -14,6 +14,7 @@ set hlsearch
 set ignorecase
 set cursorline
 set cursorcolumn
+set incsearch " https://stackoverflow.com/a/1295244/6417007
 
 if !isdirectory($HOME."/.vim")
     call mkdir($HOME."/.vim", "", 0770)
