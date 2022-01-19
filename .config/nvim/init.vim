@@ -20,7 +20,7 @@ if !isdirectory($HOME."/.vim")
     call mkdir($HOME."/.vim", "", 0770)
 endif
 if !isdirectory($HOME."/.vim/backups")
-    call mkdir($HOME."/.vim/backups, "", 0700)
+    call mkdir($HOME."/.vim/backups", "", 0700)
 endif
 if !isdirectory($HOME."/.vim/undo-files")
     call mkdir($HOME."/.vim/undo-files", "", 0700)
