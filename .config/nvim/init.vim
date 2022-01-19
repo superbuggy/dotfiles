@@ -1,4 +1,4 @@
-set number relativenumber
+set number
 set hidden
 set autoindent
 set expandtab
