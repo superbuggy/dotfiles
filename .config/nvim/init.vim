@@ -39,6 +39,7 @@ vnoremap > >gv
 
 let mapleader = "\<space>"
 
+noremap <leader>* :let @/ = "" <CR>
 nmap <leader>ve :edit ~/.config/nvim/init.vim<cr>
 nmap <leader>vc :edit ~/.config/nvim/coc-settings.json<cr>
 nmap <leader>vk :edit ~/.config/kitty/kitty.conf<cr>
