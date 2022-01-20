@@ -4,7 +4,8 @@ noremap <leader>* :let @/ = "" <CR>
 nmap <leader>ve :edit ~/.config/nvim/init.vim<cr>
 nmap <leader>vc :edit ~/.config/nvim/coc-settings.json<cr>
 nmap <leader>vk :edit ~/.config/kitty/kitty.conf<cr>
-nmap <leader>vp :NERDTreeFind ~/.config/nvim/plugins-installed/<cr>
+nmap <leader>vp :edit ~/.config/nvim/plugins.vim<cr>
+nmap <leader>vm :edit ~/.config/nvim/mappings.vim<cr>
 nmap <leader>vr :source ~/.config/nvim/init.vim<cr>
 nmap <leader>[ :bp<cr>
 nmap <leader>] :bn<cr>
