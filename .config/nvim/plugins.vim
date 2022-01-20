@@ -19,6 +19,7 @@ source ~/.config/nvim/plugins-installed/lion.vim
 source ~/.config/nvim/plugins-installed/nerdtree.vim
 source ~/.config/nvim/plugins-installed/pasta.vim
 source ~/.config/nvim/plugins-installed/sonokai.vim
+source ~/.config/nvim/plugins-installed/sayonara.vim
 source ~/.config/nvim/plugins-installed/surround.vim
 source ~/.config/nvim/plugins-installed/tidal.vim
 source ~/.config/nvim/plugins-installed/unimpaired.vim
