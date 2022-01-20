@@ -9,6 +9,7 @@ nmap <leader>vm :edit ~/.config/nvim/mappings.vim<cr>
 nmap <leader>vr :source ~/.config/nvim/init.vim<cr>
 nmap <leader>[ :bp<cr>
 nmap <leader>] :bn<cr>
+nmap <leader>`f :Format<cr>
 
 nmap ;r :call ToggleRelativeNumber()<CR>
 
