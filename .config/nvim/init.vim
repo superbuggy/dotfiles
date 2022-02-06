@@ -9,12 +9,15 @@ set list
 set listchars=tab:→\ ,nbsp:␣,trail:•,extends:⟩,precedes:⟨
 set wildmenu
 set wildmode=longest:full,full
-set termguicolors
 set hlsearch
 set ignorecase
 set cursorline
 set cursorcolumn
 set incsearch " https://stackoverflow.com/a/1295244/6417007
+syntax on
+if (has("termguicolors"))
+  set termguicolors
+endif
 
 if !isdirectory($HOME."/.vim")
     call mkdir($HOME."/.vim", "", 0770)
@@ -33,5 +36,4 @@ set backupdir=~/.vim/backups
 source ~/.config/nvim/commands.vim
 source ~/.config/nvim/mappings.vim
 source ~/.config/nvim/plugins.vim
-
-colorscheme sonokai
+source ~/.config/nvim/theming.vim
