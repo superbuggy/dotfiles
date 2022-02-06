@@ -31,12 +31,11 @@
         "haskell"
       ],
       "initializationOptions": {
-        "languageServerHaskell": {
-          "hlintOn": true,
-          "maxNumberOfProblems": 10,
-          "completionSnippetsOn": true
-        }
+        "hlintOn": true,
+        "maxNumberOfProblems": 10,
+        "completionSnippetsOn": true
       }
     }
   }
+}
 }
