@@ -10,7 +10,7 @@ command! -bang -nargs=? -complete=dir Files
     \ call fzf#run( 
     \   fzf#wrap(
     \     'files',
-    \     fzf#vim#with_preview({ 
+    \     fzf#vim#with_preview({
     \       'dir': <q-args>,
     \       'sink': 'e', 
     \       'source': 'rg --files --hidden' 
