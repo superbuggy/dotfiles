@@ -3,3 +3,8 @@
   name = superbuggy
 [init]
   defaultBranch = main
+[include]
+  path = ~/.gitconfig.working-dir-alternates
+[url "github-superbuggy:superbuggy/"]
+  insteadOf = git@github.com:superbuggy/
+
