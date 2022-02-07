@@ -5,6 +5,6 @@
   defaultBranch = main
 [include]
   path = ~/.gitconfig.working-dir-alternates
-[url "github-superbuggy:superbuggy/"]
+[url "github.com-superbuggy:superbuggy/"]
   insteadOf = git@github.com:superbuggy/
 
