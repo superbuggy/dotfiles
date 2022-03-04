@@ -83,7 +83,10 @@ fi
 # Aliases
 #
 ##################################################################################
-
+unalias g
+function g {
+  googler --count=20 $1
+}
 alias gs='git status'
 alias gc='git commit -m'
 alias gd='git diff'
@@ -94,7 +97,7 @@ alias gl='git log --all --decorate --graph --pretty=format:"%C(yellow)%h%Creset 
 alias ghnr='open https://github.com/new'
 alias plz=sudo
 alias ezrc='nvim ~/.zshrc'
-alias evrc='nvim ~/.config/nvim/init.vim'
+alias evc='cd ~/.config/nvim/ && nvim ~/.config/nvim/'
 alias xls='exa --long --header --git'
 alias ls='xls -a'
 alias refpro='source ~/.zshrc'
