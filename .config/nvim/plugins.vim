@@ -16,6 +16,7 @@ source ~/.config/nvim/plugins-installed/fugitive.vim
 source ~/.config/nvim/plugins-installed/fzf.vim
 source ~/.config/nvim/plugins-installed/gruvbox.vim
 source ~/.config/nvim/plugins-installed/lion.vim
+source ~/.config/nvim/plugins-installed/markdown-preview.vim
 source ~/.config/nvim/plugins-installed/nerdtree.vim
 source ~/.config/nvim/plugins-installed/pasta.vim
 source ~/.config/nvim/plugins-installed/sonokai.vim

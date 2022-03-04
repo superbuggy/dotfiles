@@ -36,4 +36,5 @@ set backupdir=~/.vim/backups
 source ~/.config/nvim/commands.vim
 source ~/.config/nvim/mappings.vim
 source ~/.config/nvim/plugins.vim
+source ~/.config/nvim/post-plugin-load-config.vim
 source ~/.config/nvim/theming.vim
