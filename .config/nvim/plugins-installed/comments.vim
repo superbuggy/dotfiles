@@ -1,2 +1,2 @@
 Plug 'tpope/vim-commentary'
-Plug 'suy/vim-context-commentstring'
+Plug 'JoosepAlviste/nvim-ts-context-commentstring'
