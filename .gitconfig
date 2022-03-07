@@ -8,3 +8,5 @@
 [url "github.com-superbuggy:superbuggy/"]
   insteadOf = git@github.com:superbuggy/
 
+[pull]
+	rebase = true
