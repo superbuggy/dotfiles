@@ -7,7 +7,7 @@
 !/.config/nvim
 !/.config/karabiner
 !/.config/kitty
-
+!/keyboard-firmware
 !/.fonts
 
 /.oh-my-zsh-custom/*
