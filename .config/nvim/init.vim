@@ -15,9 +15,6 @@ set cursorline
 set cursorcolumn
 set incsearch " https://stackoverflow.com/a/1295244/6417007
 syntax on
-if (has("termguicolors"))
-  set termguicolors
-endif
 
 if !isdirectory($HOME."/.vim")
     call mkdir($HOME."/.vim", "", 0770)
@@ -38,3 +35,4 @@ source ~/.config/nvim/mappings.vim
 source ~/.config/nvim/plugins.vim
 source ~/.config/nvim/post-plugin-load-config.vim
 source ~/.config/nvim/theming.vim
+
