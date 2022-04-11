@@ -3,6 +3,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'stsewd/fzf-checkout.vim'
 
 let g:fzf_layout = { 'up': '~90%', 'window': { 'width': 0.8, 'height': 0.8, 'yoffset':0.5, 'xoffset': 0.5 } }
+let g:fzf_preview_window = ['right:50%', 'ctrl-/']
 let $FZF_DEFAULT_OPTS = '--layout=reverse --info=inline'
 
 " Customise the Files command to use rg which respects .gitignore files
@@ -22,7 +23,7 @@ command! -bang -nargs=? -complete=dir Files
 command! -bang -nargs=* Rg
   \ call fzf#vim#grep(
   \   "rg --column --line-number --no-heading --color=always --smart-case -- ".shellescape(<q-args>), 1,
-  \   fzf#vim#with_preview('right', 'ctrl-/'), 1)
+  \   fzf#vim#with_preview({'options': '--delimiter : --nth 4..'}), <bang>0) " Ignore filename matches: https://github.com/junegunn/fzf.vim/issues/714
 
 
 " Add an AllFiles variation that ignores .gitignore files
