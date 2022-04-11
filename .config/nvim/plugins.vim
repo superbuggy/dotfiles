@@ -1,3 +1,4 @@
+
 " Automatically install vim-plug
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
 if empty(glob(data_dir . '/autoload/plug.vim'))
@@ -13,15 +14,17 @@ source ~/.config/nvim/plugins-installed/comments.vim
 source ~/.config/nvim/plugins-installed/editorconfig.vim
 source ~/.config/nvim/plugins-installed/exchange.vim
 source ~/.config/nvim/plugins-installed/fugitive.vim
-source ~/.config/nvim/plugins-installed/fzf.vim
+" source ~/.config/nvim/plugins-installed/fzf.vim
 source ~/.config/nvim/plugins-installed/gruvbox.vim
 source ~/.config/nvim/plugins-installed/lion.vim
 source ~/.config/nvim/plugins-installed/markdown-preview.vim
+source ~/.config/nvim/plugins-installed/matchup.vim
 source ~/.config/nvim/plugins-installed/nerdtree.vim
 source ~/.config/nvim/plugins-installed/pasta.vim
 source ~/.config/nvim/plugins-installed/sonokai.vim
 source ~/.config/nvim/plugins-installed/sayonara.vim
 source ~/.config/nvim/plugins-installed/surround.vim
+source ~/.config/nvim/plugins-installed/telescope.vim
 source ~/.config/nvim/plugins-installed/tidal.vim
 source ~/.config/nvim/plugins-installed/treesitter.vim
 source ~/.config/nvim/plugins-installed/unimpaired.vim
