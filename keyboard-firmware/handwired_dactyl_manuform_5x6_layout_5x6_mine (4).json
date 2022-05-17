@@ -195,7 +195,7 @@
       "KC_SPC",
       "KC_SPC",
       "RGUI_T(KC_BSPC)",
-      "LSFT(KC_ESC)",
+      "LSFT_T(KC_ESC)",
       "LT(3,KC_ENT)",
       "LT(3,KC_ENT)",
       "RSFT_T(KC_ESC)",
