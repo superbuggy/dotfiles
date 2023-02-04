@@ -14,7 +14,6 @@ source ~/.config/nvim/plugins-installed/comments.vim
 source ~/.config/nvim/plugins-installed/editorconfig.vim
 source ~/.config/nvim/plugins-installed/exchange.vim
 source ~/.config/nvim/plugins-installed/fugitive.vim
-" source ~/.config/nvim/plugins-installed/fzf.vim
 source ~/.config/nvim/plugins-installed/gruvbox.vim
 source ~/.config/nvim/plugins-installed/lion.vim
 source ~/.config/nvim/plugins-installed/markdown-preview.vim
@@ -28,8 +27,8 @@ source ~/.config/nvim/plugins-installed/telescope.vim
 source ~/.config/nvim/plugins-installed/tidal.vim
 source ~/.config/nvim/plugins-installed/treesitter.vim
 source ~/.config/nvim/plugins-installed/unimpaired.vim
-source ~/.config/nvim/plugins-installed/visual-multi.vim
 source ~/.config/nvim/plugins-installed/wordmotion.vim
 source ~/.config/nvim/plugins-installed/workspaces.vim
+Plug 'tpope/vim-abolish'
 
 call plug#end()

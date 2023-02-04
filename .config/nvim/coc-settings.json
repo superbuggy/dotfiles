@@ -1,8 +1,7 @@
 {
   "coc.preferences.extensionUpdateCheck": "daily",
-  "coc.preferences.formatOnType": true,
+  "coc.preferences.formatOnType": false,
   "diagnostic.checkCurrentLine": true,
-  "diagnostic.virtualText": true,
   "diagnostic.enableMessage": "jump",
   "diagnostic.errorSign": "☣",
   "diagnostic.warningSign": "⚠",
@@ -10,10 +9,14 @@
   "diagnostic.hintSign": "",
   "eslint.autoFixOnSave": true,
   "eslint.format.enable": true,
+  "tslint.autoFixOnSave": true,
+  "tslint.enable": true,
   "languageserver": {
     "haskell": {
       "command": "haskell-language-server-wrapper",
-      "args": ["--lsp"],
+      "args": [
+        "--lsp"
+      ],
       "rootPatterns": [
         ".stack.yaml",
         ".hie-bios",
@@ -21,7 +24,11 @@
         "cabal.config",
         "package.yaml"
       ],
-      "filetypes": ["hs", "lhs", "haskell"],
+      "filetypes": [
+        "hs",
+        "lhs",
+        "haskell"
+      ],
       "initializationOptions": {
         "languageServerHaskell": {
           "hlintOn": true,

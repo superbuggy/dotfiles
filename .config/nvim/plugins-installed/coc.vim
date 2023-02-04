@@ -12,12 +12,13 @@ let g:coc_global_extensions = [
     \ 'coc-html',
     \ 'coc-json',
     \ 'coc-pairs',
+    \ 'coc-prettier',
     \ 'coc-lua',
     \ 'coc-vimlsp',
-    \ 'coc-prettier',
     \ 'coc-sh',
     \ 'coc-snippets',
     \ 'coc-svg',
+    \ 'coc-tslint',
     \ 'coc-tsserver',
     \ '@yaegassy/coc-volar',
 \ ]
@@ -48,7 +49,6 @@ function! s:show_documentation()
     execute '!' . &keywordprg . " " . expand('<cword>')
   endif
 endfunction
-
 " Highlight the symbol and its references when holding the cursor.
 autocmd CursorHold * silent call CocActionAsync('highlight')
 autocmd FileType scss setl iskeyword+=@-@
@@ -59,6 +59,7 @@ nmap <leader>rn <Plug>(coc-rename)
 " Add `:Format` command to format current buffer.
 command! -nargs=0 Format :call CocAction('format')
 command! -nargs=0 ESLFix :call CocAction('runCommand', 'eslint.executeAutofix')
+command! -nargs=0 TSLFix :call CocAction('runCommand', 'tslint.fixAllProblems')
 
 " Add `:Fold` command to fold current buffer.
 command! -nargs=? Fold :call     CocAction('fold', <f-args>)
