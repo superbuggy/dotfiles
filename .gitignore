@@ -22,4 +22,5 @@
 !/.rgignore
 !/.gitignore_global
 !/Brewfile
+!/Brewfile.lock.json
 
