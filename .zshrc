@@ -125,6 +125,3 @@ case ":$PATH:" in
 esac
 # pnpm end
 
-# Enable use of RVM (Load RVM as a func)
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
