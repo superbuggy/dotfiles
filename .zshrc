@@ -124,4 +124,4 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
-
+export PATH=/usr/local/Cellar/postgresql@14/14.9_1/bin:$PATH
