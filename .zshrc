@@ -125,3 +125,7 @@ case ":$PATH:" in
 esac
 # pnpm end
 export PATH=/usr/local/Cellar/postgresql@14/14.9_1/bin:$PATH
+echo 'export PATH="/usr/local/sbin:$PATH"' >> ~/.zshrc
+export PATH="/usr/local/sbin:$PATH"
+
+export PATH="/usr/local/sbin:$PATH"
