@@ -1,2 +1,0 @@
-Plug 'ellisonleao/gruvbox.nvim'
-
