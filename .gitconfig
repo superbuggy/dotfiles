@@ -3,10 +3,6 @@
   name = superbuggy
 [init]
   defaultBranch = main
-[include]
-  path = ~/.gitconfig.working-dir-alternates
-[url "github.com-superbuggy:superbuggy/"]
-  insteadOf = git@github.com:superbuggy/
 
 [pull]
 	rebase = true
