@@ -1,8 +1,21 @@
 [user]
   email = jpqreichard@gmail.com
   name = superbuggy
+
 [init]
   defaultBranch = main
 
 [pull]
 	rebase = true
+[blame]
+	ignoreRevsFile = .git-blame-ignore-revs
+[commit]
+	gpgsign = true
+[tag]
+	gpgSign = true
+[gpg]
+	program = /usr/local/bin/gpg
+[core]
+	excludesFile = ~/.gitignore_global
+[push]
+	autoSetupRemote = true
