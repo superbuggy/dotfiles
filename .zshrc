@@ -98,10 +98,11 @@ alias ghnr='open https://github.com/new'
 alias plz=sudo
 alias ezrc='nvim ~/.zshrc'
 alias evc='cd ~/.config/nvim/ && nvim ~/.config/nvim/'
-alias xls='exa --long --header --git'
+alias xls='eza --long --header --git'
 alias ls='xls -a'
 alias refpro='source ~/.zshrc'
 alias acki='ack --ignore-file=match:/\.svg\|\.scss\|app\.\|\.css/'
+alias zcd="zoxide"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -126,3 +127,8 @@ esac
 # pnpm end
 export PATH=/usr/local/Cellar/postgresql@14/14.9_1/bin:$PATH
 export PATH="/usr/local/sbin:$PATH"
+
+eval "$(zoxide init zsh)"
+
+export GPG_TTY=`tty`
+
