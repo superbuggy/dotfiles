@@ -1,4 +1,5 @@
 # >>>>>>>>>>>>>>>>>>>
+.ignored_scripts/
 # Content from https://raw.githubusercontent.com/github/gitignore/master/Global/OSX.gitignore
 .DS_Store
 .AppleDouble
@@ -33,3 +34,4 @@ node_modules/
 bower_components/
 netlifyctl-debug.log
 yarn-error.log
+
