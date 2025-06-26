@@ -17,6 +17,7 @@
 
 !/.zshrc
 !/.bash_profile
+!/.gitattributes
 !/.gitconfig
 !/.gitignore
 !/.rgignore

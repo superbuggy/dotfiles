@@ -19,3 +19,6 @@
 	excludesFile = ~/.gitignore_global
 [push]
 	autoSetupRemote = true
+[filter "ignore_signing_key"]
+	clean = "sed '/;no-commit$/d'"
+	smudge = cat
