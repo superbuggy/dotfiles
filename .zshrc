@@ -1,4 +1,4 @@
-export PATH=$HOME/.local/bin:$PATH
+export PATH=$HOME/.local/bin:$PATH:/opt/local/bin:/opt/local/sbin
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -100,7 +100,7 @@ alias ezrc='nvim ~/.zshrc'
 alias evc='cd ~/.config/nvim/ && nvim ~/.config/nvim/'
 alias xls='eza --long --header --git'
 alias ls='xls -a'
-alias refpro='source ~/.zshrc'
+alias refrc='source ~/.zshrc'
 alias acki='ack --ignore-file=match:/\.svg\|\.scss\|app\.\|\.css/'
 alias zcd="zoxide"
 
@@ -131,4 +131,5 @@ export PATH="/usr/local/sbin:$PATH"
 eval "$(zoxide init zsh)"
 
 export GPG_TTY=`tty`
+
 
