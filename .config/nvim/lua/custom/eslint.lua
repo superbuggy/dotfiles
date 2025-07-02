@@ -1,0 +1,32 @@
+-- -- In your lsp configuration file (e.g., lua/plugins/lsp.lua)
+--
+-- -- A utility function to find the project root.
+-- -- Many people have this in a general utils file.
+-- -- A utility function to find the project root.
+-- local function find_project_root()
+--   local found = vim.fs.find({ '.git', 'package.json' }, { upward = true, stop = vim.fn.expand('~') })[1]
+--   if found then
+--     -- Return the parent directory of the found file/folder
+--     return vim.fs.dirname(found)
+--   end
+--   return nil
+-- end
+--
+-- require('lspconfig').eslint.setup({
+--   -- Other settings like on_attach, capabilities, etc.
+--   -- ...
+--   settings = {
+--     -- This tells the ESLint server to use a specific config file.
+--     options = {
+--       overrideConfigFile = (function()
+--         local root = find_project_root()
+--         if root then
+--           -- You can change '.eslintrc.js' to whatever your config file is named
+--           return root .. '/eslint.config.mjs'
+--         end
+--         return nil
+--       end)(),
+--     },
+--   },
+-- })
+--
