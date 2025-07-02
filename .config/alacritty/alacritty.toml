@@ -1,0 +1,9 @@
+[terminal]
+[terminal.shell]
+program = "/bin/zsh" # Or wherever your zsh executable is located
+args = ["--login"] # Optional: Use --login to ensure zsh loads its login shell configuration (like .zprofile)
+
+[general]
+import = [
+  "~/.config/alacritty/keybindings.toml"
+]
