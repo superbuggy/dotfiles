@@ -1,24 +1,19 @@
+[core]
+	editor = nvim
+	excludesfile = ~/.gitignore-global
+	attributesfile = ~/.gitattributes_global
 [user]
-  email = jpqreichard@gmail.com
-  name = superbuggy
-
-[init]
-  defaultBranch = main
-
-[pull]
-	rebase = true
-[blame]
-	ignoreRevsFile = .git-blame-ignore-revs
+	name = superbuggy
+	email = jpqreichard@gmail.com
+	signingkey = 6DFD3A89
 [commit]
 	gpgsign = true
 [tag]
 	gpgSign = true
-[gpg]
-	program = /usr/local/bin/gpg
-[core]
-	excludesFile = ~/.gitignore_global
-[push]
-	autoSetupRemote = true
-[filter "ignore_signing_key"]
-	clean = "sed '/;no-commit$/d'"
+[pull]
+	rebase = true
+[filter "gemini_api_key_filter"]
+	smudge = cat
+[filter "hidden_aliases"]
+	clean = sed '/source \"\\$HOME\\/\\._aliases\"/d' 
 	smudge = cat

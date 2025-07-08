@@ -16,12 +16,11 @@
 !/.oh-my-zsh-custom/plugins
 
 !/.zshrc
-!/.bash_profile
-!/.gitattributes
 !/.gitconfig
 !/.gitignore
 !/.rgignore
 !/.gitignore_global
+!/.gitattributes_global
 !/Brewfile
 !/Brewfile.lock.json
 
